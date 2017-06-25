@@ -284,6 +284,10 @@ style quick_button_text:
 ## This screen is included in the main and game menus, and provides navigation
 ## to other menus, and to start the game.
 
+style game_title is text:
+    size 40
+    font "fonts/Nunito-BoldItalic.ttf"
+
 screen navigation():
 
     vbox:
@@ -296,7 +300,9 @@ screen navigation():
 
         # GAME TITLE IS HERE!
         vbox:
-            text "{size=+15}The\nHealslut\nSimulator\n{/size}"
+            text "The\nHealslut\nSimulator\n":
+                style "game_title"
+
 
         if main_menu:
 
@@ -1237,7 +1243,6 @@ style skip_triangle:
     ## We have to use a font that has the BLACK RIGHT-POINTING SMALL TRIANGLE
     ## glyph in it.
     font "DejaVuSans.ttf"
-
 
 ## Notify screen ###############################################################
 ##
