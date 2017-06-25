@@ -294,6 +294,10 @@ screen navigation():
 
         spacing gui.navigation_spacing
 
+        # GAME TITLE IS HERE!
+        vbox:
+            text "{size=+15}The\nHealslut\nSimulator\n{/size}"
+
         if main_menu:
 
             textbutton _("Start") action Start()
@@ -361,14 +365,14 @@ screen main_menu():
     ## contents of the main menu are in the navigation screen.
     use navigation
 
-    if gui.show_name:
-
-        vbox:
-            text "[config.name!t]":
-                style "main_menu_title"
-
-            text "[config.version]":
-                style "main_menu_version"
+    #if gui.show_name:
+    #
+    #    vbox:
+    #        text "[config.name!t]":
+    #            style "main_menu_title"
+    #
+    #            #text "[config.version]":
+    #            #style "main_menu_version"
 
 
 style main_menu_frame is empty
@@ -1455,7 +1459,3 @@ style slider_pref_vbox:
 style slider_pref_slider:
     variant "small"
     xsize 600
-
-
-
-
